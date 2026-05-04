@@ -70,3 +70,31 @@ def lambda_handler(event, context):
         "statusCode": 200, 
         "body": "Data stored in DynamoDB" 
     } 
+
+
+
+
+
+
+
+test : - 
+{ 
+  "Records": [ 
+    { 
+      "eventVersion": "2.1", 
+      "eventSource": "aws:s3", 
+      "awsRegion": "us-east-1", 
+      "eventTime": "2026-03-09T12:00:00.000Z", 
+      "eventName": "ObjectCreated:Put", 
+      "s3": { 
+        "bucket": { 
+          "name": "your-bucket-name" 
+        }, 
+        "object": { 
+          "key": "example.txt", 
+          "size": 123 
+        } 
+      } 
+    } 
+  ] 
+} 
